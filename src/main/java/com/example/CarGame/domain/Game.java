@@ -11,7 +11,7 @@ public class Game {
     private IdGame idGame;
     private Player player;
     private StateGame stateGame;
-    private Podio podio;
+    private Podium podium;
 
     public IdGame getIdGame() {
         return idGame;
@@ -37,11 +37,11 @@ public class Game {
         this.stateGame = stateGame;
     }
 
-    public Podio getPodio() {
-        return podio;
+    public Podium getPodio() {
+        return podium;
     }
 
-    public void setPodio(Podio podio) {
-        this.podio = podio;
+    public void setPodio(Podium podium) {
+        this.podium = podium;
     }
 }

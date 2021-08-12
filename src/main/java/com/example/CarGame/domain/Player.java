@@ -1,6 +1,7 @@
 package com.example.CarGame.domain;
 
 import com.example.CarGame.values.Name;
+import com.example.CarGame.values.PlayerId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,14 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class Player {
     @Id
-    private String playerId;
+    private PlayerId playerId;
     private Name name;
 
-    public String getPlayerId() {
+    public PlayerId getPlayerId(String id) {
         return playerId;
     }
 
-    public void setPlayerId(String playerId) {
+    public void setPlayerId(PlayerId playerId) {
         this.playerId = playerId;
     }
 

@@ -1,9 +1,5 @@
 package com.example.CarGame.dtos;
 
-import com.example.CarGame.values.DriverId;
-import com.example.CarGame.values.PlayerId;
-import com.example.CarGame.values.ThrowDice;
-
 public class DriverDTO {
     private String driverId;
     private String throwDice;

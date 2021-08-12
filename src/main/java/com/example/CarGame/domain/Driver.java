@@ -1,7 +1,7 @@
 package com.example.CarGame.domain;
 
-import com.example.CarGame.values.DriverId;
-import com.example.CarGame.values.PlayerId;
+import com.example.CarGame.values.id.DriverId;
+import com.example.CarGame.values.id.PlayerId;
 import com.example.CarGame.values.ThrowDice;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

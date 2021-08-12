@@ -1,12 +1,11 @@
-package com.example.CarGame.values;
+package com.example.CarGame.values.id;
 
 import java.util.UUID;
 
-public class PlayerId {
-
+public class DriverId {
     private UUID id;
 
-    public PlayerId(UUID id) {
+    public DriverId(UUID id) {
         this.id = id;
     }
 

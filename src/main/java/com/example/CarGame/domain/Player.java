@@ -1,30 +1,27 @@
 package com.example.CarGame.domain;
 
 import com.example.CarGame.values.Name;
-import com.example.CarGame.values.PlayerId;
+import com.example.CarGame.values.PositionQuantityWinner;
+import com.example.CarGame.values.id.GameId;
+import com.example.CarGame.values.id.IdCar;
+import com.example.CarGame.values.id.PlayerId;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-
-@Document
-public class Player {
+@Getter
+@AllArgsConstructor
+@RequiredArgsConstructor
+@Document(collection = "Player")
+public class Player{
     @Id
     private PlayerId playerId;
     private Name name;
-
-    public PlayerId getPlayerId(String id) {
-        return playerId;
-    }
-
-    public void setPlayerId(PlayerId playerId) {
-        this.playerId = playerId;
-    }
-
-    public Name getName() {
-        return name;
-    }
-
-    public void setName(Name name) {
-        this.name = name;
-    }
+    private IdCar idCar;
+    private GameId gameId;
+    private PositionQuantityWinner positionFirstWinner;
+    private PositionQuantityWinner positionSecondWinner;
+    private PositionQuantityWinner positionThirdFirstWinner;
 }

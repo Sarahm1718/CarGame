@@ -1,6 +1,8 @@
 package com.example.CarGame.domain;
 
 import com.example.CarGame.values.*;
+import com.example.CarGame.values.id.DriverId;
+import com.example.CarGame.values.id.IdPodium;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

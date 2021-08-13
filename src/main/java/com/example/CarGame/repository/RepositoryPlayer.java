@@ -7,6 +7,4 @@ import reactor.core.publisher.Mono;
 
 public interface RepositoryPlayer extends ReactiveMongoRepository<Player, String> {
 
-    Mono<Player> createPlayer(String playerId);
-    Flux<Player> findByIdPlayer(String playerId);
 }

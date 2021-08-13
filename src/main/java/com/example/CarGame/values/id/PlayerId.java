@@ -1,16 +1,16 @@
 package com.example.CarGame.values.id;
 
-import java.util.UUID;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class PlayerId {
 
-    private UUID id;
-
-    public PlayerId(UUID id) {
-        this.id = id;
+    private final String value;
+    public static PlayerId of(String value) {
+        return new PlayerId(value);
     }
 
-    public String getId() {
-        return id.toString();
+    public String getValue() {
+        return this.value;
     }
 }

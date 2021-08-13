@@ -1,15 +1,17 @@
 package com.example.CarGame.values.id;
 
+import lombok.AllArgsConstructor;
+
 import java.util.UUID;
 
+@AllArgsConstructor
 public class IdPodium {
-    private UUID id;
+    private final String value;
 
-    public IdPodium(UUID id) {
-        this.id = id;
+    public static IdPodium of(String value){
+        return  new IdPodium(value);
     }
-
-    public String getId() {
-        return id.toString();
+    public String getValue(){
+        return this.value;
     }
 }

@@ -2,8 +2,8 @@ package com.example.CarGame.domain;
 
 import com.example.CarGame.values.Name;
 import com.example.CarGame.values.PositionQuantityWinner;
+import com.example.CarGame.values.id.DriverId;
 import com.example.CarGame.values.id.GameId;
-import com.example.CarGame.values.id.IdCar;
 import com.example.CarGame.values.id.PlayerId;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,10 +18,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Player{
     @Id
     private PlayerId playerId;
+
     private Name name;
-    private IdCar idCar;
-    private GameId gameId;
     private PositionQuantityWinner positionFirstWinner;
     private PositionQuantityWinner positionSecondWinner;
     private PositionQuantityWinner positionThirdFirstWinner;
+    private GameId gameId;
+    private DriverId driverId;
 }

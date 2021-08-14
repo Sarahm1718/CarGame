@@ -24,7 +24,7 @@ public class PlayerDTO {
     private Integer positionFirstWinner;
     private Integer positionSecondWinner;
     private Integer positionThirdFirstWinner;
-    private GameId gameId;
-    private DriverId driverId;
+    private String gameId;
+    private String driverId;
 
 }

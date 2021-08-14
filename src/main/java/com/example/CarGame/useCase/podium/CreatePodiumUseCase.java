@@ -14,16 +14,13 @@ import reactor.core.publisher.Mono;
 public class CreatePodiumUseCase {
 
     private final RepositoryPodium repositoryDTOPodium;
-    private final MapperPodium mapperPodium;
 
     @Autowired
-    public CreatePodiumUseCase(RepositoryPodium repositoryDTOPodium, MapperPodium mapperPodium){
+    public CreatePodiumUseCase(RepositoryPodium repositoryDTOPodium){
         this.repositoryDTOPodium = repositoryDTOPodium;
-        this.mapperPodium = mapperPodium;
     }
     public Mono<PodiumDTO>  apply(PodiumDTO podiumDTO){
-        return repositoryDTOPodium.save(mapperPodium.mapperToPodium(podiumDTO.getIdPodium())
-                .apply(podiumDTO))
+        return repositoryDTOPodium.save(podiumDTO)
                 .thenReturn(podiumDTO);
     }
 }

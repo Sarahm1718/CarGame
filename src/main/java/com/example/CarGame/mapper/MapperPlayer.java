@@ -22,8 +22,8 @@ public class MapperPlayer {
                 new PositionQuantityWinner(updatePlayer.getPositionFirstWinner()),
                 new PositionQuantityWinner(updatePlayer.getPositionSecondWinner()),
                 new PositionQuantityWinner(updatePlayer.getPositionThirdFirstWinner()),
-                GameId.of(updatePlayer.getGameId().getValue()),
-                DriverId.of(updatePlayer.getDriverId().getValue())
+                GameId.of(updatePlayer.getGameId()),
+                DriverId.of(updatePlayer.getDriverId())
         );
     }
     public Function<Player, PlayerDTO> mapperToDTO(){
@@ -33,8 +33,8 @@ public class MapperPlayer {
                 player.getPositionFirstWinner().getValue(),
                 player.getPositionSecondWinner().getValue(),
                 player.getPositionThirdFirstWinner().getValue(),
-                player.getGameId(),
-                player.getDriverId()
+                player.getGameId().getValue(),
+                player.getDriverId().getValue()
         );
     }
 }

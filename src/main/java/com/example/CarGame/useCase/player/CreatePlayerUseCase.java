@@ -12,18 +12,15 @@ import reactor.core.publisher.Mono;
 public class CreatePlayerUseCase {
 
     private final RepositoryPlayer repositoryDTOPlayer;
-    private final MapperPlayer mapperPlayer;
 
 
-    public CreatePlayerUseCase(RepositoryPlayer repositoryPlayer, MapperPlayer mapperPlayer) {
+    public CreatePlayerUseCase(RepositoryPlayer repositoryPlayer) {
         this.repositoryDTOPlayer = repositoryPlayer;
-        this.mapperPlayer = mapperPlayer;
     }
 
     public Mono<PlayerDTO> apply(PlayerDTO playerDTO){
         return  repositoryDTOPlayer
-                .save(mapperPlayer.mapperToPlayer(playerDTO.getPlayerId())
-                .apply(playerDTO))
+                .save(playerDTO)
                 .thenReturn(playerDTO);
     }
 }

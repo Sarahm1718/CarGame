@@ -1,4 +1,4 @@
-package com.example.CarGame.routers;
+package com.example.CarGame.routers.player;
 import com.example.CarGame.dtos.PlayerDTO;
 import com.example.CarGame.useCase.player.CreatePlayerUseCase;
 import org.springframework.context.annotation.Bean;

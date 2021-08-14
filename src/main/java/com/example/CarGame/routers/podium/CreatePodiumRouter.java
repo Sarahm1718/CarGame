@@ -1,4 +1,4 @@
-package com.example.CarGame.routers;
+package com.example.CarGame.routers.podium;
 
 import com.example.CarGame.dtos.PodiumDTO;
 import com.example.CarGame.useCase.podium.CreatePodiumUseCase;

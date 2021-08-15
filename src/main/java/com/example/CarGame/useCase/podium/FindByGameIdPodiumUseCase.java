@@ -10,12 +10,12 @@ import reactor.core.publisher.Flux;
 
 @Service
 @Validated
-public class FindByGameIdPodium {
+public class FindByGameIdPodiumUseCase {
     private final RepositoryPodium repositoryPodium;
     private final MapperPodium mapperPodium;
 
 @Autowired
-    public FindByGameIdPodium(RepositoryPodium repositoryPodium, MapperPodium mapperPodium) {
+    public FindByGameIdPodiumUseCase(RepositoryPodium repositoryPodium, MapperPodium mapperPodium) {
         this.repositoryPodium = repositoryPodium;
     this.mapperPodium = mapperPodium;
 }

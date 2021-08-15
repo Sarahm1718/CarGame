@@ -1,6 +1,6 @@
 package com.example.CarGame.mapper;
 
-import com.example.CarGame.domain.Podium;
+import com.example.CarGame.domain.game.Podium;
 import com.example.CarGame.dtos.PodiumDTO;
 import com.example.CarGame.values.PositionWinner;
 import com.example.CarGame.values.id.GameId;

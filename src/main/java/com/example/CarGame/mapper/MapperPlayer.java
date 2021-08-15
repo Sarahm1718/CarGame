@@ -1,6 +1,6 @@
 package com.example.CarGame.mapper;
 
-import com.example.CarGame.domain.Player;
+import com.example.CarGame.domain.game.Player;
 import com.example.CarGame.dtos.PlayerDTO;
 import com.example.CarGame.values.Name;
 import com.example.CarGame.values.PositionQuantityWinner;

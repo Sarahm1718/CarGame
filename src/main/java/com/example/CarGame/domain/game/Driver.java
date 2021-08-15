@@ -1,4 +1,4 @@
-package com.example.CarGame.domain;
+package com.example.CarGame.domain.game;
 
 import com.example.CarGame.values.id.DriverId;
 import com.example.CarGame.values.id.PlayerId;

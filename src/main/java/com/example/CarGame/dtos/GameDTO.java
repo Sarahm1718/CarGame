@@ -1,40 +1,16 @@
 package com.example.CarGame.dtos;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Data
+@RequiredArgsConstructor
+@AllArgsConstructor
+@Document(collection = "Game")
 public class GameDTO {
-    private String idGame;
-    private String player;
-    private Boolean stateGame;
-    private String podio;
+    private String gameId;
+    private String idTrack;
 
-    public String getIdGame() {
-        return idGame;
-    }
-
-    public void setIdGame(String idGame) {
-        this.idGame = idGame;
-    }
-
-    public String getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(String player) {
-        this.player = player;
-    }
-
-    public Boolean getStateGame() {
-        return stateGame;
-    }
-
-    public void setStateGame(Boolean stateGame) {
-        this.stateGame = stateGame;
-    }
-
-    public String getPodio() {
-        return podio;
-    }
-
-    public void setPodio(String podio) {
-        this.podio = podio;
-    }
 }

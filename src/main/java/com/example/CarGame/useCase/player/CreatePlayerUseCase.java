@@ -11,16 +11,19 @@ import reactor.core.publisher.Mono;
 @Validated
 public class CreatePlayerUseCase {
 
-    private final RepositoryPlayer repositoryDTOPlayer;
+    private final RepositoryPlayer repositoryPlayer;
+    private final MapperPlayer mapperPlayer;
 
 
-    public CreatePlayerUseCase(RepositoryPlayer repositoryPlayer) {
-        this.repositoryDTOPlayer = repositoryPlayer;
+    public CreatePlayerUseCase(RepositoryPlayer repositoryPlayer, MapperPlayer mapperPlayer) {
+        this.repositoryPlayer = repositoryPlayer;
+        this.mapperPlayer = mapperPlayer;
     }
 
     public Mono<PlayerDTO> apply(PlayerDTO playerDTO){
-        return  repositoryDTOPlayer
-                .save(playerDTO)
-                .thenReturn(playerDTO);
+        return  repositoryPlayer
+                .save(mapperPlayer.mapperToPlayer(playerDTO.getPlayerId())
+                .apply(playerDTO))
+                .map(mapperPlayer.mapperToDTO());
     }
 }

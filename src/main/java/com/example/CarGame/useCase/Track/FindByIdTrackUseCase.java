@@ -1,7 +1,5 @@
 package com.example.CarGame.useCase.Track;
 
-import com.example.CarGame.domain.game.Track;
-import com.example.CarGame.dtos.PodiumDTO;
 import com.example.CarGame.dtos.TrackDTO;
 import com.example.CarGame.mapper.MapperTrack;
 import com.example.CarGame.repository.RepositoryTrack;
@@ -12,22 +10,20 @@ import reactor.core.publisher.Mono;
 
 @Service
 @Validated
-public class CreateTrackUseCase  {
-
-
+public class FindByIdTrackUseCase {
     private final RepositoryTrack repositoryTrack;
     private final MapperTrack mapperTrack;
 
     @Autowired
-    public CreateTrackUseCase(RepositoryTrack repositoryTrack, MapperTrack mapperTrack) {
+    public FindByIdTrackUseCase( RepositoryTrack repositoryTrack, MapperTrack mapperTrackr) {
         this.repositoryTrack = repositoryTrack;
-        this.mapperTrack = mapperTrack;
+        this.mapperTrack = mapperTrackr;
     }
 
-    public Mono<TrackDTO> apply(TrackDTO trackDTO){
-        return repositoryTrack
-                .save(mapperTrack.mapperToTrack(trackDTO.getIdPodium())
-                        .apply(trackDTO))
-                .map(mapperTrack.mapperToTrackDTO());
+    public Mono<TrackDTO> getfindbyidtrack(String id){
+        return repositoryTrack.findById(id)
+                .flatMap(
+                        track -> Mono.just(mapperTrack.mapperToTrackDTO().apply(track))
+                );
     }
 }

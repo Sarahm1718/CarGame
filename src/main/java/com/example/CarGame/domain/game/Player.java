@@ -19,12 +19,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Player")
 public class Player{
     @Id
-    private PlayerId playerId;
-
-    private Name name;
-    private PositionQuantityWinner positionFirstWinner;
-    private PositionQuantityWinner positionSecondWinner;
-    private PositionQuantityWinner positionThirdFirstWinner;
-    private GameId gameId;
-    private DriverId driverId;
+    private String playerId;
+    private String name;
+    private Integer positionFirstWinner;
+    private Integer positionSecondWinner;
+    private Integer positionThirdFirstWinner;
+    private String gameId;
+    private String driverId;
 }

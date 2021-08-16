@@ -1,20 +1,16 @@
-package com.example.CarGame.domain.game;
+package com.example.CarGame.dtos;
 
 import com.example.CarGame.values.PositionCurrent;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Getter
-@Setter
+
+@Data
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Document(collection = "Car")
-public class Car {
-
+public class CarDTO {
     @Id
     private String id;
     private Boolean isArrivedGoal;
@@ -23,5 +19,4 @@ public class Car {
     private String driverId;
     private String gameId;
     private String idLane;
-
 }

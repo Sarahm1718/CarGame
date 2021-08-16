@@ -16,25 +16,30 @@ import java.util.function.Function;
 public class MapperPlayer {
 
     public Function<PlayerDTO, Player> mapperToPlayer(String id){
-        return updatePlayer -> new Player(
-              PlayerId.of(id),
-                new Name(updatePlayer.getName()),
-                new PositionQuantityWinner(updatePlayer.getPositionFirstWinner()),
-                new PositionQuantityWinner(updatePlayer.getPositionSecondWinner()),
-                new PositionQuantityWinner(updatePlayer.getPositionThirdFirstWinner()),
-                GameId.of(updatePlayer.getGameId()),
-                DriverId.of(updatePlayer.getDriverId())
-        );
+        return updatePlayer -> {
+            Player player = new Player();
+            player.setPlayerId(id);
+            player.setName(updatePlayer.getName());
+            player.setPositionFirstWinner(updatePlayer.getPositionFirstWinner());
+            player.setPositionSecondWinner(updatePlayer.getPositionSecondWinner());
+            player.setPositionThirdFirstWinner(updatePlayer.getPositionThirdFirstWinner());
+            player.setGameId(updatePlayer.getGameId());
+            player.setDriverId(updatePlayer.getDriverId());
+            return player;
+
+        };
+
+
     }
     public Function<Player, PlayerDTO> mapperToDTO(){
         return player -> new PlayerDTO(
-                player.getPlayerId().getValue(),
-                player.getName().getName(),
-                player.getPositionFirstWinner().getValue(),
-                player.getPositionSecondWinner().getValue(),
-                player.getPositionThirdFirstWinner().getValue(),
-                player.getGameId().getValue(),
-                player.getDriverId().getValue()
+                player.getPlayerId(),
+                player.getName(),
+                player.getPositionFirstWinner(),
+                player.getPositionSecondWinner(),
+                player.getPositionThirdFirstWinner(),
+                player.getGameId(),
+                player.getDriverId()
         );
     }
 }

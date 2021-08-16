@@ -1,4 +1,4 @@
-package com.example.CarGame.routers.Game;
+/*package com.example.CarGame.routers.Game;
 import com.example.CarGame.dtos.PodiumDTO;
 import com.example.CarGame.useCase.podium.FindByGameIdPodiumUseCase;
 import org.springframework.context.annotation.Bean;
@@ -21,3 +21,4 @@ public class FindByGameIdPodiumRouter {
                         .body(BodyInserters.fromPublisher(findByGameIdPodiumUseCase.getPodiumByGameId(request.pathVariable("gameid")), PodiumDTO.class))
         );
 }}
+*/

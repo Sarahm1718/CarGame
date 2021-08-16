@@ -15,10 +15,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Lane")
 public class Lane {
     @Id
-    private IdLane idLane;
-    private IdCar idCar;
-    private GameId gameId;
-    private IdTrack idTrack;
-    private DriverId driverId;
+    private String idLane;
+    private String idCar;
+    private String gameId;
+    private String idTrack;
+    private String driverId;
 
 }

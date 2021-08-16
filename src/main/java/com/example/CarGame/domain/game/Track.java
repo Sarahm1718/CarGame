@@ -20,9 +20,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Track {
 
     @Id
-    private IdTrack trackId;
-    private DistanceTrack distanceTrack;
-    private GameId gameId;
-    private IdPodium idPodium;
+    private String trackId;
+    private Integer distanceTrack;
+    private String gameId;
+    private String idPodium;
 
 }

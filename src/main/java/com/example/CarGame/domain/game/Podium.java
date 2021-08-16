@@ -17,10 +17,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "Podium")
 public class Podium {
     @Id
-    private IdPodium idPodium;
-    private GameId gameId;
-    private PositionWinner firstPlace;
-    private PositionWinner secondPlace;
-    private PositionWinner thirdPlace;
+    private String idPodium;
+    private String gameId;
+    private String firstPlace;
+    private String secondPlace;
+    private String thirdPlace;
 
 }

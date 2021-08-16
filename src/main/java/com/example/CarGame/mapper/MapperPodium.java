@@ -12,22 +12,25 @@ import java.util.function.Function;
 @Component
 public class MapperPodium {
     public Function<PodiumDTO, Podium> mapperToPodium(String id){
-        return updatePodium -> new Podium(
-                IdPodium.of(id),
-              GameId.of(updatePodium.getGameId()),
-              new PositionWinner(updatePodium.getFirstPlace()),
-                new PositionWinner(updatePodium.getSecondPlace()),
-                new PositionWinner(updatePodium.getThirdPlace())
-        );
+        return dataPodium -> {
+            Podium podium = new Podium();
+            podium.setIdPodium(dataPodium.getIdPodium());
+            podium.setGameId(dataPodium.getGameId());
+            podium.setFirstPlace(dataPodium.getFirstPlace());
+            podium.setSecondPlace(dataPodium.getSecondPlace());
+            podium.setThirdPlace(dataPodium.getThirdPlace());
+            return podium;
+
+        };
     }
 
     public Function<Podium,PodiumDTO> mapperToDTO(){
         return podium -> new PodiumDTO(
-                podium.getIdPodium().getValue(),
-                podium.getGameId().getValue(),
-                podium.getFirstPlace().getValue(),
-                podium.getSecondPlace().getValue(),
-                podium.getGameId().getValue()
+                podium.getIdPodium(),
+                podium.getGameId(),
+                podium.getFirstPlace(),
+                podium.getSecondPlace(),
+                podium.getGameId()
         );
     }
 }

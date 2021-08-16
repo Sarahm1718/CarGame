@@ -2,9 +2,11 @@ package com.example.CarGame.mapper;
 
 import com.example.CarGame.domain.Lane;
 import com.example.CarGame.dtos.LaneDTO;
+import org.springframework.stereotype.Component;
 
 import java.util.function.Function;
 
+@Component
 public class MapperLane {
     public Function<LaneDTO, Lane> mapperToLane(String id){
         return updateLane -> {

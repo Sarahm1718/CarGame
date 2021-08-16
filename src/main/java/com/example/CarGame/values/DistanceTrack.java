@@ -6,5 +6,5 @@ import lombok.Getter;
     @Getter
     @AllArgsConstructor
     public class DistanceTrack {
-        private final Integer distanceTrack;
+        private final Integer value;
 }

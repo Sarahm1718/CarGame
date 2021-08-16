@@ -1,8 +1,5 @@
 package com.example.CarGame.domain.game;
 
-import com.example.CarGame.values.StateGame;
-import com.example.CarGame.values.id.GameId;
-import com.example.CarGame.values.id.IdTrack;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

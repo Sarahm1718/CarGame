@@ -3,6 +3,7 @@ package com.example.CarGame.dtos;
 import com.example.CarGame.values.PositionCurrent;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -13,8 +14,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class CarDTO {
     @Id
     private String id;
-    private Boolean isArrivedGoal;
-    private PositionCurrent positionCurrent;
+    private Boolean goalArrived;
+    private Integer positionCurrent;
     private Integer advance;
     private String driverId;
     private String gameId;

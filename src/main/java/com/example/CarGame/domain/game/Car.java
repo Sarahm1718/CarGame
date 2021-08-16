@@ -17,8 +17,8 @@ public class Car {
 
     @Id
     private String id;
-    private Boolean isArrivedGoal;
-    private PositionCurrent positionCurrent;
+    private Boolean goalArrived;
+    private Integer positionCurrent;
     private Integer advance;
     private String driverId;
     private String gameId;
